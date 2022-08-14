@@ -63,6 +63,7 @@ class LSTM(nn.Module):
                     3. unpack, _ = pad_packed_sequence(output, batch_first=True)
 
         参考: https://colab.research.google.com/drive/1cpn6pk2J4liha9jgDLNWhEWeWJb2cdch?usp=sharing#scrollTo=soc-PApFBmyC
+             https://towardsdatascience.com/lstm-text-classification-using-pytorch-2c6c657f8fc0
         """
 
         pack = pack_padded_sequence(feature, seq_len, batch_first=True)
