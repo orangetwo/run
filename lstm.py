@@ -46,7 +46,7 @@ class LSTM(nn.Module):
     def forward(self, feature, seq_len) -> torch.Tensor:
         """
         因为使用的是 rnn-like 模型, 这里需要 pack一下数据, 才能输入 rnn-like 模型.
-        在 pack 数据之前之前, 需要两个步骤: 1. 依照长度降序排序  2. 计算batch内每个sample的长度
+        在 pack 数据之前, 需要两个步骤: 1. 依照长度降序排序  2. 计算batch内每个sample的长度
         两个步骤 这里在我们在 DataLoader 类里进行实现.
                 实现方式为: examples: List[Tuple(List[int], int)]
                     def collate_fn(examples):
